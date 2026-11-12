@@ -2,6 +2,11 @@ import { Test, TestingModule } from '@nestjs/testing';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
 
+// better-auth es ESM puro y Jest corre en CommonJS: se simula el decorador.
+jest.mock('@thallesp/nestjs-better-auth', () => ({
+  AllowAnonymous: () => () => undefined,
+}));
+
 describe('AppController', () => {
   let appController: AppController;
 

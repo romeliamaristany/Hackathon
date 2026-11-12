@@ -20,7 +20,13 @@
     "test:debug": "node --inspect-brk -r tsconfig-paths/register -r ts-node/register node_modules/.bin/jest --runInBand",
     "test:e2e": "jest --config ./test/jest-e2e.json",
     "postinstall": "prisma skills sync || exit 0",
-    "contract:emit": "prisma contract emit"
+    "contract:emit": "prisma contract emit",
+    "db:generate": "npx prisma generate",
+    "db:migrate": "npx prisma migrate dev",
+    "db:format": "npx prisma format",
+    "db:studio": "npx prisma studio",
+    "auth:migrate": "npx auth@latest migrate --config src/lib/auth/auth.ts -y",
+    "auth:generate": "npx auth@latest generate --config src/lib/auth/auth.ts"
   },
   "dependencies": {
     "@arcjet/nest": "^1.15.0",
@@ -29,7 +35,10 @@
     "@nestjs/core": "^11.1.0",
     "@nestjs/platform-express": "^11.1.0",
     "@prisma/orm-postgres": "^8.0.0-rc.23",
+    "@thallesp/nestjs-better-auth": "^2.4.0",
+    "better-auth": "^1.7.21",
     "dotenv": "^18.0.10",
+    "pg": "^8.23.1",
     "reflect-metadata": "^0.2.2",
     "rxjs": "^7.8.1",
     "temporal-polyfill": "^1.0.8"
@@ -43,6 +52,7 @@
     "@types/express": "^5.0.0",
     "@types/jest": "^30.0.0",
     "@types/node": "^24.0.0",
+    "@types/pg": "^8.23.1",
     "@types/supertest": "^7.0.0",
     "jest": "^30.0.0",
     "oxlint": "^1.58.0",
