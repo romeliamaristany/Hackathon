@@ -7,6 +7,7 @@ import { AuthModule } from './lib/auth/auth.module';
 import { PrismaModule } from './lib/database/prisma.module';
 import { UserModule } from './module/user/user.module';
 import { AdminModule } from './module/admin/admin.module';
+import { HackathonModule } from './module/hackathon/hackathon.module';
 
 import 'dotenv/config';
 @Module({
@@ -17,6 +18,7 @@ import 'dotenv/config';
     AuthModule,
     UserModule,
     AdminModule,
+    HackathonModule,
   ],
   controllers: [AppController],
   providers: [AppService],
