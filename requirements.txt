@@ -1,0 +1,45 @@
+﻿# Dependencias del proyecto NestJS / TypeScript.
+# Este archivo es informativo; no es compatible con pip.
+# Instalar con: npm install
+# Las versiones y los rangos proceden de package.json.
+
+# Dependencias de produccion
+@arcjet/nest@^1.15.0
+@nestjs/common@^11.1.0
+@nestjs/config@^4.0.3
+@nestjs/core@^11.1.0
+@nestjs/mapped-types@^12.0.1
+@nestjs/platform-express@^11.1.0
+@prisma/orm-postgres@^8.0.0-rc.23
+@thallesp/nestjs-better-auth@^2.4.0
+better-auth@^1.7.21
+class-transformer@^0.5.1
+class-validator@^0.15.1
+dotenv@^18.0.10
+pg@^8.23.1
+reflect-metadata@^0.2.2
+rxjs@^7.8.1
+temporal-polyfill@^1.0.8
+
+# Dependencias de desarrollo
+@nestjs/cli@^11.0.0
+@nestjs/mau@^0.2.6
+@nestjs/schematics@^11.0.0
+@nestjs/testing@^11.1.0
+@prisma/cli-engine@^0.9.0
+@types/express@^5.0.0
+@types/jest@^30.0.0
+@types/node@^24.0.0
+@types/pg@^8.23.1
+@types/supertest@^7.0.0
+jest@^30.0.0
+oxlint@^1.58.0
+prettier@^3.4.2
+prisma@^8.0.0-rc.33
+source-map-support@^0.5.21
+supertest@^7.0.0
+ts-jest@^29.2.5
+ts-loader@^9.5.2
+ts-node@^10.9.2
+tsconfig-paths@^4.2.0
+typescript@5.9.3
