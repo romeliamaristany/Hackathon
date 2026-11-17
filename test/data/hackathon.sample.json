@@ -1,0 +1,77 @@
+{
+  "valid": [
+    {
+      "name": "AI Builders Hackathon 2027",
+      "description": "48 horas para construir productos con IA generativa.",
+      "startAt": "2027-03-12T09:00:00.000Z",
+      "endAt": "2027-03-14T18:00:00.000Z",
+      "isActive": true
+    },
+    {
+      "name": "Green Tech Challenge",
+      "description": "Soluciones de software para reducir la huella de carbono.",
+      "startAt": "2027-05-20T08:00:00.000Z",
+      "endAt": "2027-05-22T20:00:00.000Z",
+      "isActive": true
+    },
+    {
+      "name": "Fintech Sprint",
+      "startAt": "2027-07-01T10:00:00.000Z",
+      "endAt": "2027-07-02T22:00:00.000Z",
+      "isActive": false
+    },
+    {
+      "name": "Open Data Weekend",
+      "description": "Hackathon abierto sobre datos públicos y transparencia.",
+      "startAt": "2027-09-10T09:30:00.000Z",
+      "endAt": "2027-09-12T17:00:00.000Z",
+      "isActive": true
+    }
+  ],
+  "invalid": [
+    {
+      "case": "name ausente y description demasiado corta",
+      "body": {
+        "description": "corta",
+        "startAt": "2027-03-12T09:00:00.000Z",
+        "endAt": "2027-03-14T18:00:00.000Z",
+        "isActive": true
+      }
+    },
+    {
+      "case": "fechas en el pasado",
+      "body": {
+        "name": "Hackathon pasado",
+        "startAt": "2020-01-10T09:00:00.000Z",
+        "endAt": "2020-01-12T18:00:00.000Z",
+        "isActive": true
+      }
+    },
+    {
+      "case": "fecha con formato inválido",
+      "body": {
+        "name": "Fecha rota",
+        "startAt": "no-es-una-fecha",
+        "endAt": "2027-03-14T18:00:00.000Z",
+        "isActive": true
+      }
+    },
+    {
+      "case": "isActive no es booleano",
+      "body": {
+        "name": "Booleano inválido",
+        "startAt": "2027-03-12T09:00:00.000Z",
+        "endAt": "2027-03-14T18:00:00.000Z",
+        "isActive": "si"
+      }
+    }
+  ],
+  "update": [
+    { "name": "AI Builders Hackathon 2027 (editado)" },
+    { "isActive": false },
+    {
+      "description": "Descripción actualizada con más de diez caracteres.",
+      "endAt": "2027-03-15T12:00:00.000Z"
+    }
+  ]
+}

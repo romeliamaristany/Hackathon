@@ -1,0 +1,13 @@
+{
+  "mcpServers": {
+    "arcjet": {
+      "type": "http",
+      "url": "https://api.arcjet.com/mcp"
+    },
+    "prisma": {
+      "type": "stdio",
+      "command": "cmd",
+      "args": ["/c", "npx", "-y", "prisma", "mcp"]
+    }
+  }
+}
