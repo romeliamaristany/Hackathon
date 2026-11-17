@@ -1,0 +1,33 @@
+
+name: Test
+
+on:
+  pull_request:
+    branches: [master]
+
+jobs:
+  validate:
+    name: Validar NestJS
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Descargar repositorio
+        uses: actions/checkout@v4
+
+      - name: Configurar Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          cache: npm
+
+      - name: Instalar dependencias
+        run: npm ci --legacy-peer-deps
+
+      - name: Analizar código con Lint
+        run: npm run lint
+
+      - name: Ejecutar tests unitarios
+        run: npm test -- --runInBand
+
+      - name: Compilar NestJS
+        run: npm run build
